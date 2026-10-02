@@ -15,10 +15,10 @@ The dataset spans 2026-03-01 to 2026-08-31: 15,000 users who signed up through f
 | `02_price_hike_churn.sql` | Question 2: did the June 2026 price increase cause churn (monthly vs. annual plan comparison, plus a check ruling out a technical billing bug) |
 | `03_revenue_impact.sql` | Question 3: how monthly recurring revenue trended, both company-wide and isolated to the pre-hike customer cohort |
 | `04_support_ticket_corroboration.sql` | Question 4: whether support tickets corroborate the churn pattern found in question 2 |
-| `data/users.csv` | 15,000 users: signup date, acquisition channel, plan type, device OS |
-| `data/usage_events.csv` | ~467,700 app usage events (app opens, content views, feature use) |
-| `data/charges.csv` | ~32,900 billing charges: amount, billing period, success/failure status |
-| `data/support_tickets.csv` | ~3,070 support tickets: category, resolution time |
+| `users.csv` | 15,000 users: signup date, acquisition channel, plan type, device OS |
+| `usage_events.csv` | ~467,700 app usage events (app opens, content views, feature use) |
+| `charges.csv` | ~32,900 billing charges: amount, billing period, success/failure status |
+| `support_tickets.csv` | ~3,070 support tickets: category, resolution time |
 
 ## How to run
 
@@ -27,10 +27,10 @@ Load the CSVs into a SQLite database, then run any of the `.sql` files against i
 ```bash
 sqlite3 subscription.db <<EOF
 .mode csv
-.import data/users.csv users
-.import data/usage_events.csv usage_events
-.import data/charges.csv charges
-.import data/support_tickets.csv support_tickets
+.import users.csv users
+.import usage_events.csv usage_events
+.import charges.csv charges
+.import support_tickets.csv support_tickets
 EOF
 
 sqlite3 subscription.db < 01_channel_retention.sql
