@@ -6,6 +6,8 @@ This project analyzes a **simulated** subscription-app dataset (no real company,
 
 The dataset spans 2026-03-01 to 2026-08-31: 15,000 users who signed up through four acquisition channels (organic, referral, paid_search, influencer), on either a monthly or annual plan, across ios/android/web.
 
+**See also:** [Power BI dashboard](https://github.com/sheha61-boop/subscription-app-powerbi-dashboard), the visual companion to this analysis, built on the same dataset.
+
 ## Files
 
 | File | Description |
